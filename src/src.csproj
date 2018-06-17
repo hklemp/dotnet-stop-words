@@ -8,7 +8,7 @@
     <Owners>Hendrik Klemp</Owners>
     <PackageProjectUrl>https://github.com/hklemp/dotnet-stop-words</PackageProjectUrl>
     <PackageTags>StopWord StopWords Stop Word</PackageTags>
-    <Title>UriBuilderExtension</Title>
+    <Title>dotnet-stop-words</Title>
     <Description>Get list of common stop words in various languages in dotnet</Description>
     <PackageId>dotnet-stop-words</PackageId>
   </PropertyGroup>
