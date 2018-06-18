@@ -1,5 +1,5 @@
 # dotnet-stop-words
-Get list of common stop words in various languages in dotnet. Based on the list of [Alir3z4].(https://github.com/Alir3z4/stop-words/)    
+Get list of common stop words in various languages in dotnet. Based on the list of [Alir3z4](https://github.com/Alir3z4/stop-words/)    
 [![NuGet version (dotnet-stop-words)](https://img.shields.io/nuget/v/dotnet-stop-words.svg?style=flat-square)](https://www.nuget.org/packages/dotnet-stop-words/)
 [![Build Status](https://travis-ci.org/hklemp/dotnet-stop-words.svg?branch=master)](https://travis-ci.org/hklemp/dotnet-stop-words/)
 
