@@ -11,6 +11,7 @@
     <Title>dotnet-stop-words</Title>
     <Description>Get list of common stop words in various languages in dotnet</Description>
     <PackageId>dotnet-stop-words</PackageId>
+    <Version>1.0.1.0</Version>
   </PropertyGroup>
 
   <ItemGroup>
