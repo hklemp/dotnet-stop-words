@@ -26,7 +26,7 @@ namespace StopWord
 			if(r != null)
 				count = r.Length;
 
-			Assert.Equal(174,count);
+            Assert.Equal(1298,count);
         }
   
 
@@ -34,7 +34,7 @@ namespace StopWord
 		public void RemoveStopWordsTest()
         {
 			var s = "Hello this is a test";
-			var exepted = "Hello test";
+			var exepted = "Hello";
 
 			var r = s.RemoveStopWords("en");
 
