@@ -6,42 +6,49 @@ Get list of common stop words in various languages in dotnet. Based on the list 
 
 ## Available languages
 * Arabic
+* Bulgarian
 * Catalan
+* Czech
 * Danish
 * Dutch
 * English
 * Finnish
 * French
 * German
+* Hindi
 * Hungarian
+* Indonesian
 * Italian
 * Norwegian
+* Polish
 * Portuguese
 * Romanian
 * Russian
+* Slovak
 * Spanish
 * Swedish
 * Turkish
 * Ukrainian
-
+* Vietnamese
+ 
 ## Installation
 ``` bash
-Install-Package dotnet-stop-words -Version 1.0.0
+Install-Package dotnet-stop-words -Version 1.0.2
 ``` 
 or
 ``` bash
-dotnet add package dotnet-stop-words --version 1.0.0
+dotnet add package dotnet-stop-words --version 1.0.2
 ``` 
 or
 ``` bash
-paket add dotnet-stop-words --version 1.0.0
+paket add dotnet-stop-words --version 1.0.2
 ``` 
 
 ## Usage
 ```csharp
 var testString = "Hello this is a test";
 var newString = s.RemoveStopWords("en");
-// newstring is now Hello test
+// newstring is now Hello
 ```
 
 ```csharp
