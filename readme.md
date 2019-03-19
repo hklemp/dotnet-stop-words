@@ -33,15 +33,15 @@ Get list of common stop words in various languages in dotnet. Based on the list 
  
 ## Installation
 ``` bash
-Install-Package dotnet-stop-words -Version 1.0.2
+Install-Package dotnet-stop-words -Version 1.0.3
 ``` 
 or
 ``` bash
-dotnet add package dotnet-stop-words --version 1.0.2
+dotnet add package dotnet-stop-words --version 1.0.3
 ``` 
 or
 ``` bash
-paket add dotnet-stop-words --version 1.0.2
+paket add dotnet-stop-words --version 1.0.3
 ``` 
 
 ## Usage
