@@ -24,13 +24,13 @@ namespace StopWord
 
 		public static  string[] GetStopWords(string shortLanguageName)
         {
-            var fullLanguageName = mapLanguage(shortLanguageName);
+            var fullLanguageName = MapLanguage(shortLanguageName);
             return LoadStopWords(fullLanguageName);
         }
 
 
 
-		private  static string mapLanguage(string shortLanguageName)
+		private static string MapLanguage(string shortLanguageName)
         {
             var langJson = LoadLanguages();
             var data = (JObject)JsonConvert.DeserializeObject(langJson);

@@ -25,8 +25,9 @@ namespace StopWord
 		private static string Remove(string s,string shortLanguageName)
 		{
 			var stopWordList = StopWords.GetStopWords(shortLanguageName);
-			s = s.Split(' ').Where(x => !stopWordList.Contains(x)).DefaultIfEmpty().Aggregate((current, next) => current + " " + next).ToString();
-			return s;
+            s = s.Split(' ').Where(x => !stopWordList.Contains(x)).DefaultIfEmpty().Aggregate((current, next) => current + " " + next);
+			
+            return s  ?? String.Empty;
 		}
     }
 }

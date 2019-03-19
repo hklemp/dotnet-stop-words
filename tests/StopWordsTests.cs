@@ -28,8 +28,7 @@ namespace StopWord
 
             Assert.Equal(1298,count);
         }
-  
-
+ 
 		[Fact]
 		public void RemoveStopWordsTest()
         {
@@ -39,6 +38,17 @@ namespace StopWord
 			var r = s.RemoveStopWords("en");
 
        		Assert.Equal(exepted, r);
-        }      
+        }
+
+        [Fact]
+        public void RemoveAllWordsTest()
+        {
+            var s = "this is a test";
+            var exepted = String.Empty;
+
+            var r = s.RemoveStopWords("en");
+
+            Assert.Equal(exepted, r);
+        }
     }
 }
