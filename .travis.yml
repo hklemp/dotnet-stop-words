@@ -11,5 +11,5 @@ matrix:
       osx_image: xcode9.1
   fast_finish: true
 script:
-  - dotnet build -c "Release"
-  - dotnet test  -c "Release"  
+  - dotnet build -c "Release" "./src/src.csproj"
+  - dotnet dotnet test -c "Release" "./tests/tests.csproj"
