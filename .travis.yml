@@ -12,4 +12,4 @@ matrix:
   fast_finish: true
 script:
   - dotnet build -c "Release" "./src/src.csproj"
-  - dotnet dotnet test -c "Release" "./tests/tests.csproj"
+  - dotnet test -c "Release" "./tests/tests.csproj"
