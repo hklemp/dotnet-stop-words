@@ -11,7 +11,7 @@
     <Title>dotnet-stop-words</Title>
     <Description>Get list of common stop words in various languages in dotnet</Description>
     <PackageId>dotnet-stop-words</PackageId>
-    <Version>1.0.3.0</Version>
+    <Version>1.0.4.0</Version>
     <PackageReleaseNotes>Fix issue, if all words are stop words</PackageReleaseNotes>
   </PropertyGroup>
 
@@ -31,6 +31,7 @@
     <None Remove="data\indonesian.txt" />
     <None Remove="data\italian.txt" />
     <None Remove="data\languages.json" />
+    <None Remove="data\malaysian.txt" />
     <None Remove="data\norwegian.txt" />
     <None Remove="data\polish.txt" />
     <None Remove="data\portuguese.txt" />
@@ -41,6 +42,7 @@
     <None Remove="data\swedish.txt" />
     <None Remove="data\turkish.txt" />
     <None Remove="data\ukrainian.txt" />
+    <None Remove="data\vietnamese.txt" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="data\arabic.txt" />
@@ -58,6 +60,7 @@
     <EmbeddedResource Include="data\indonesian.txt" />
     <EmbeddedResource Include="data\italian.txt" />
     <EmbeddedResource Include="data\languages.json" />
+    <EmbeddedResource Include="data\malaysian.txt" />
     <EmbeddedResource Include="data\norwegian.txt" />
     <EmbeddedResource Include="data\polish.txt" />
     <EmbeddedResource Include="data\portuguese.txt" />
@@ -68,6 +71,7 @@
     <EmbeddedResource Include="data\swedish.txt" />
     <EmbeddedResource Include="data\turkish.txt" />
     <EmbeddedResource Include="data\ukrainian.txt" />
+    <EmbeddedResource Include="data\vietnamese.txt" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
