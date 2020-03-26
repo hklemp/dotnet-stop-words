@@ -8,7 +8,7 @@ namespace StopWord
     public class StopWordsTests
     {
         [Fact]
-        public void GetStopWordsCurrentCultureTest()
+        public void GetStopWords_ForCurrentCulture_ShouldBeNotNull()
         {
             CultureInfo culture = CultureInfo.GetCultureInfo("en-US");
             CultureInfo.CurrentCulture = culture;
@@ -16,38 +16,23 @@ namespace StopWord
             Assert.NotNull(r);
         }
 
-        [Fact]
-        public void GetStopWordsForENTest()
+        [Theory]
+        [InlineData("en", 1298)]
+        public void GetStopWords_ForEN_ShouldReturnNoOfWords(string lang, int noOfWords)
         {
-            var r = StopWords.GetStopWords("en");
-            var count = 0;
+            var r = StopWords.GetStopWords(lang);
 
-            if (r != null)
-                count = r.Length;
-
-            Assert.Equal(1298, count);
+            Assert.NotNull(r);
+            Assert.Equal(noOfWords, r.Length);
         }
 
-        [Fact]
-        public void RemoveStopWordsTest()
+        [Theory]
+        [InlineData("this is a test","")]
+        [InlineData("Hello this is a test", "Hello")]
+        public void RemoveStopWords_ShouldEqualsExpected(string text, string expected)
         {
-            var s = "Hello this is a test";
-            var expected = "Hello";
-
-            var r = s.RemoveStopWords("en");
-
-            Assert.Equal(expected, r);
-        }
-
-        [Fact]
-        public void RemoveAllWordsTest()
-        {
-            var s = "this is a test";
-            var expected = String.Empty;
-
-            var r = s.RemoveStopWords("en");
-
-            Assert.Equal(expected, r);
+            var cleandText = text.RemoveStopWords("en");
+            Assert.Equal(expected, cleandText);
         }
     }
 }
