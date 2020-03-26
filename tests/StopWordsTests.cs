@@ -8,47 +8,46 @@ namespace StopWord
     public class StopWordsTests
     {
         [Fact]
-		public void GetStopWordsCurrentCultureTest()
+        public void GetStopWordsCurrentCultureTest()
         {
-			
-			CultureInfo culture = CultureInfo.GetCultureInfo("en-US");
-			CultureInfo.CurrentCulture = culture;
-			var r = StopWords.GetStopWords();
-			Assert.NotNull(r);
+            CultureInfo culture = CultureInfo.GetCultureInfo("en-US");
+            CultureInfo.CurrentCulture = culture;
+            var r = StopWords.GetStopWords();
+            Assert.NotNull(r);
         }
-      
-		[Fact]
+
+        [Fact]
         public void GetStopWordsForENTest()
         {
-			var r = StopWords.GetStopWords("en");
-			var count = 0;
+            var r = StopWords.GetStopWords("en");
+            var count = 0;
 
-			if(r != null)
-				count = r.Length;
+            if (r != null)
+                count = r.Length;
 
-            Assert.Equal(1298,count);
+            Assert.Equal(1298, count);
         }
- 
-		[Fact]
-		public void RemoveStopWordsTest()
+
+        [Fact]
+        public void RemoveStopWordsTest()
         {
-			var s = "Hello this is a test";
-			var exepted = "Hello";
+            var s = "Hello this is a test";
+            var expected = "Hello";
 
-			var r = s.RemoveStopWords("en");
+            var r = s.RemoveStopWords("en");
 
-       		Assert.Equal(exepted, r);
+            Assert.Equal(expected, r);
         }
 
         [Fact]
         public void RemoveAllWordsTest()
         {
             var s = "this is a test";
-            var exepted = String.Empty;
+            var expected = String.Empty;
 
             var r = s.RemoveStopWords("en");
 
-            Assert.Equal(exepted, r);
+            Assert.Equal(expected, r);
         }
     }
 }
