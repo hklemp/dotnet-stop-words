@@ -19,6 +19,7 @@ Get list of common stop words in various languages in dotnet. Based on the list 
 * Finnish
 * French
 * German
+* Hebrew
 * Hindi
 * Hungarian
 * Indonesian
@@ -38,15 +39,15 @@ Get list of common stop words in various languages in dotnet. Based on the list 
  
 ## Installation
 ``` bash
-Install-Package dotnet-stop-words -Version 1.0.4
+Install-Package dotnet-stop-words -Version 1.1.0
 ``` 
 or
 ``` bash
-dotnet add package dotnet-stop-words --version 1.0.4
+dotnet add package dotnet-stop-words --version 1.1.0
 ``` 
 or
 ``` bash
-paket add dotnet-stop-words --version 1.0.4
+paket add dotnet-stop-words --version 1.1.0
 ``` 
 
 ## Usage

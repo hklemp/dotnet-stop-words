@@ -1,28 +1,28 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
+using System;
 using System.Globalization;
 using System.IO;
-using System.Reflection;
-using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
 using System.Linq;
+using System.Reflection;
 
 namespace StopWord
 {
-    public  static class StopWords
+    public static class StopWords
     {
 
-		public static string[] GetStopWords()
+        public static string[] GetStopWords()
         {
             var currentCulture = CultureInfo.CurrentCulture;
             return GetStopWords(currentCulture);
         }
 
-		public static string[] GetStopWords(CultureInfo culture)
+        public static string[] GetStopWords(CultureInfo culture)
         {
             return GetStopWords(culture.TwoLetterISOLanguageName);
         }
 
-		public static  string[] GetStopWords(string shortLanguageName)
+        public static string[] GetStopWords(string shortLanguageName)
         {
             var fullLanguageName = MapLanguage(shortLanguageName);
             return LoadStopWords(fullLanguageName);
@@ -30,7 +30,7 @@ namespace StopWord
 
 
 
-		private static string MapLanguage(string shortLanguageName)
+        private static string MapLanguage(string shortLanguageName)
         {
             var langJson = LoadLanguages();
             var data = (JObject)JsonConvert.DeserializeObject(langJson);
@@ -43,9 +43,9 @@ namespace StopWord
             return result;
         }
 
-		private static string[] LoadStopWords(string lang)
+        private static string[] LoadStopWords(string lang)
         {
-			var resourceName = String.Format("StopWord.data.{0}.txt", lang);
+            var resourceName = String.Format("StopWord.data.{0}.txt", lang);
             var data = LoadData(resourceName);
 
             var result = data.Split(new[] { "\r\n", "\r", "\n" },
@@ -54,14 +54,14 @@ namespace StopWord
             return result;
         }
 
-		private static string LoadLanguages()
+        private static string LoadLanguages()
         {
-			var resourceName = "StopWord.data.languages.json";
+            var resourceName = "StopWord.data.languages.json";
             var result = LoadData(resourceName);
             return result;
         }
 
-		private static string LoadData(string resourceName)
+        private static string LoadData(string resourceName)
         {
             string result = String.Empty;
             var assembly = Assembly.GetExecutingAssembly();
