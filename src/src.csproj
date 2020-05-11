@@ -7,12 +7,16 @@
     <PackageLicenseUrl>https://github.com/hklemp/dotnet-stop-words/blob/master/LICENSE</PackageLicenseUrl>
     <Owners>Hendrik Klemp</Owners>
     <PackageProjectUrl>https://github.com/hklemp/dotnet-stop-words</PackageProjectUrl>
-    <PackageTags>StopWord StopWords Stop Word</PackageTags>
+    <PackageTags>StopWord StopWords Stop Word text-classification text classification</PackageTags>
     <Title>dotnet-stop-words</Title>
     <Description>Get list of common stop words in various languages in dotnet</Description>
     <PackageId>dotnet-stop-words</PackageId>
-    <Version>1.0.4.0</Version>
-    <PackageReleaseNotes>Fix issue, if all words are stop words</PackageReleaseNotes>
+    <Version>1.1.0.0</Version>
+    <PackageReleaseNotes>
+    * Add hebrew 
+    * Update Newtonsoft.Json
+    </PackageReleaseNotes>
+
   </PropertyGroup>
 
   <ItemGroup>
@@ -26,6 +30,7 @@
     <None Remove="data\finnish.txt" />
     <None Remove="data\french.txt" />
     <None Remove="data\german.txt" />
+    <None Remove="data\hebrew.txt" />
     <None Remove="data\hindi.txt" />
     <None Remove="data\hungarian.txt" />
     <None Remove="data\indonesian.txt" />
@@ -55,6 +60,7 @@
     <EmbeddedResource Include="data\finnish.txt" />
     <EmbeddedResource Include="data\french.txt" />
     <EmbeddedResource Include="data\german.txt" />
+    <EmbeddedResource Include="data\hebrew.txt" />
     <EmbeddedResource Include="data\hindi.txt" />
     <EmbeddedResource Include="data\hungarian.txt" />
     <EmbeddedResource Include="data\indonesian.txt" />
