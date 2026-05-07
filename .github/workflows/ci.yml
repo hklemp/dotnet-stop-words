@@ -44,7 +44,7 @@ jobs:
       with:
         submodules: true
     - name: Setup .NET Core
-      uses: actions/setup-dotnet@v3
+      uses: actions/setup-dotnet@v5
       with:
         dotnet-version: ${{ matrix.dotnet }}
     - name: Build with dotnet
